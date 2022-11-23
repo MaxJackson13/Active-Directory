@@ -11,3 +11,11 @@ The necessary privileges are
 These rights are typically afforded to administrators, domain admins and enterprise admins
 
 From mimikatz in an elevated session run `lsadump::dcsync`. Historic password hashes are also returned.
+
+DCShadow
+--------
+DCShadows appears similar to DCSync put they're almost the reverse of eachother. While DCSync makes a request to get data from a DC, DCShadow temporarily registers the current workstation as a DC, then triggers a change to be copied across to the other domain controllers via active directory replication.
+
+
+<a href="https://www.youtube.com/watch?v=SOr_G8oOstc&t=3037s">Detecting DCSync and DCShadow Network Traffic
+</a>
