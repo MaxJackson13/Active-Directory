@@ -2,7 +2,7 @@ LM (Lan Manager)
 ----------------
 The LM hash is Microsoft's oldest form of password storage dating back to the 1980's. LM is turned off by default since Vista/Server 2008 but can be enabled on more recent systems via a GPO.
 
-The LM hash is generated via the following algorithm. 'hash' is a misnomer as no hash function is applied at any point.
+The LM hash is generated via the following algorithm.
 
 1. Convert lowercase to uppercase
 2. Pad with NULL up to 14 characters 
@@ -14,4 +14,8 @@ The LM hash is generated via the following algorithm. 'hash' is a misnomer as no
 NTLM (New Technology Lan Manager)
 ----
 This algorithm is much simpler
-`NT hash=md4(utf16-le(password))`
+`NT hash = md4(utf16-le(password))`
+
+NetNTLMv1
+---------
+NetNTLMv1 and v2 are authentication protocols and not a form of password storage. The NetNTLMv1 algorithm can use either the LM hash or the NT hash, as such responses are calculated using both hashes
