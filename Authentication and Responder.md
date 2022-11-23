@@ -15,7 +15,8 @@ NTLM (New Technology Lan Manager)
 ----
 This algorithm is much simpler
 `NT hash = md4(utf16-le(password))`
-utf16-le is a type of character encoding. Where ascii characters are 8 bits long or 1 byte, utf-16le represents one ascii character as 2 bytes as the bloew image displays
+utf16-le is a type of character encoding. Where ASCII characters are 1 byte long, UTF-16LE represents one ASCII character as 2 bytes as the below image displays
+
 <img src="Images/auth.png">
 
 
