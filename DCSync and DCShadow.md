@@ -36,7 +36,8 @@ adds the user `scrm.local\backdoor` to the domain admins group (RID 512)
 Detection
 ---------
 
-DCShadow is very stealthy as while events such as a user being added to the domain admin group would trigger an event ID 4728 (user added to security enabled global group), the logging would occur on the workstation from which the change originates. But in this case the workstation is the attacker's machine which immediately de-registers itself as a DC after the change is pushed to the other domain controllers, so no event logs are generated as the DC does not exist.
+DCShadow is especially stealthy as while events such as a user being added to the domain admin group would trigger an event ID 4728 (user added to security enabled global group), the logging would occur on the workstation from which the change originates. But in this case the workstation is the attacker's machine which immediately de-registers itself as a DC after the change is pushed to the other domain controllers, so no event logs are generated as the DC does not exist.
+
 Here's a great resource on DCSync and DCShadow
 <a href="https://www.youtube.com/watch?v=SOr_G8oOstc&t=3037s">Detecting DCSync and DCShadow Network Traffic
 </a>
