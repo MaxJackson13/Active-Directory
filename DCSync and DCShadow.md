@@ -32,5 +32,6 @@ for example
 
 adds the user `scrm.local\backdoor` to the domain admins group (RID 512)
 
+Here's a great resource on DCSync and DCShadow
 <a href="https://www.youtube.com/watch?v=SOr_G8oOstc&t=3037s">Detecting DCSync and DCShadow Network Traffic
 </a>
